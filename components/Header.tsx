@@ -43,7 +43,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <h1 className="text-xl font-bold gradient-text">
-              Alexandre.dev
+              astiefe.dev
             </h1>
           </div>
 

@@ -5,26 +5,26 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Alexandre Dubois - Développeur Web3 Fullstack',
-  description: 'Portfolio d\'Alexandre Dubois, développeur Web3 fullstack spécialisé blockchain Ethereum avec 15 ans d\'expérience en architecture logicielle.',
+  title: 'Felicien Astier - Développeur Web3 Fullstack',
+  description: 'Portfolio de Félicien Astier, développeur Web3 fullstack spécialisé blockchain Ethereum avec 15 ans d\'expérience en architecture logicielle.',
   keywords: ['Web3', 'Blockchain', 'Ethereum', 'Solidity', 'DeFi', 'Smart Contracts', 'React', 'Next.js', 'TypeScript'],
-  authors: [{ name: 'Alexandre Dubois' }],
-  creator: 'Alexandre Dubois',
-  publisher: 'Alexandre Dubois',
+  authors: [{ name: 'Felicien Astier' }],
+  creator: 'Felicien Astier',
+  publisher: 'Felicien Astier',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://alexandre-dubois.dev'),
+  metadataBase: new URL('https://astier-felicien.dev'),
   openGraph: {
-    title: 'Alexandre Dubois - Développeur Web3 Fullstack',
-    description: 'Développeur Web3 fullstack spécialisé blockchain Ethereum avec 15 ans d\'expérience en architecture logicielle.',
-    url: 'https://alexandre-dubois.dev',
-    siteName: 'Alexandre Dubois Portfolio',
+    title: 'Felicien Astier - Développeur Web3 Fullstack',
+    description: 'Développeur Web3 fullstack spécialisé blockchain Ethereum avec 15 ans d\'expérience en architecture transverse.',
+    url: 'https://astier-felicien.dev',
+    siteName: 'Felicien Astier Portfolio',
     images: [
       {
-        url: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
       },
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alexandre Dubois - Développeur Web3 Fullstack',
+    title: 'Felicien Astier - Développeur Web3 Fullstack',
     description: 'Développeur Web3 fullstack spécialisé blockchain Ethereum avec 15 ans d\'expérience en architecture logicielle.',
-    images: ['https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

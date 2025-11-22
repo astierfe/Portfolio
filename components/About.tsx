@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { Code, Zap, Users, Target } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -41,10 +42,12 @@ const About = () => {
           <div className="animate-fade-in-left">
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-2xl overflow-hidden border-4 border-blue-500/30 shadow-2xl">
-                <img 
-                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                  alt="Alexandre Dubois"
+                <Image
+                  src="/og-image.png"
+                  alt="Félicien Astier"
                   className="w-full h-full object-cover"
+                  width={320}
+                  height={320}
                 />
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl -z-10"></div>

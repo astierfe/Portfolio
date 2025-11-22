@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Alexandre <span className="gradient-text">Dubois</span>
+              Astier <span className="gradient-text">Felicien</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-300 mb-4">
               Développeur Web3 Fullstack
@@ -62,7 +62,7 @@ const Hero = () => {
                 <Linkedin size={24} />
               </a>
               <a 
-                href="mailto:alexandre@example.com"
+                href="mailto:astierfe@gmail.com"
                 className="p-3 rounded-full border border-blue-500/30 hover:border-blue-500/60 transition-colors duration-200 hover:bg-blue-500/10"
               >
                 <Mail size={24} />
