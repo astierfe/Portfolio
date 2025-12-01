@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Send, Download, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,17 +26,36 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
+      toast.success('Message envoyé avec succès !');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      toast.error('Erreur lors de l\'envoi. Réessayez.');
+      console.error('EmailJS error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -143,12 +165,22 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send size={20} className="mr-2" />
-                    Envoyer le message
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={20} className="mr-2 animate-spin" />
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={20} className="mr-2" />
+                        Envoyer le message
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>
@@ -198,7 +230,7 @@ const Contact = () => {
                   <p className="text-gray-400 mb-4">
                     Disponible immédiatement pour missions freelance ou CDI.
                   </p>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 mb-6">
                     <div className="flex items-center gap-2 text-green-400 text-sm">
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                       <span>Remote-first</span>
@@ -208,6 +240,13 @@ const Contact = () => {
                       <span>1 jour/semaine à Paris maximum</span>
                     </div>
                   </div>
+
+                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                    <a href="/CV_FelicienAstier_Dev-Web3.pdf" download>
+                      <Download size={20} className="mr-2" />
+                      Télécharger mon CV
+                    </a>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
