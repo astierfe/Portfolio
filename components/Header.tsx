@@ -43,9 +43,9 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold gradient-text">
-              felicien-astier.dev
-            </h1>
+            <a href="https://portfolio-astier-web3.vercel.app" className="text-xl font-bold gradient-text hover:opacity-80 transition-opacity">
+              portfolio-astier-web3
+            </a>
           </div>
 
           {/* Desktop Navigation */}
