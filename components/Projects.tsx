@@ -1,11 +1,16 @@
 "use client";
 
-import { ExternalLink, Github } from 'lucide-react';
+import { useState } from 'react';
+import { ExternalLink, Github, Image as ImageIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import ImageCarousel from './ImageCarousel';
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState<{ title: string; screenshots: string[] } | null>(null);
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+
   const projects = [
     {
       title: "LendForge",
@@ -13,7 +18,14 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400",
       tags: ["Solidity", "The Graph", "Python", "Next.js", "Chainlink", "DeFi", "Foundry"],
       demoUrl: "https://lend-forge.vercel.app/",
-      codeUrl: "https://github.com/astierfe/LendForge"
+      codeUrl: "https://github.com/astierfe/LendForge",
+      screenshots: [
+        "/screenshots/lendforge/01.JPG",
+        "/screenshots/lendforge/02.JPG",
+        "/screenshots/lendforge/03.JPG",
+        "/screenshots/lendforge/04.JPG",
+        "/screenshots/lendforge/05.JPG"
+      ]
     },
     {
       title: "ChainStaker",
@@ -21,7 +33,12 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=400",
       tags: ["Solidity", "Python", "Flask", "MongoDB", "Redis", "Celery", "Next.js", "Foundry"],
       demoUrl: "https://chainstalker.vercel.app/",
-      codeUrl: "https://github.com/astierfe/ChainStalker"
+      codeUrl: "https://github.com/astierfe/ChainStalker",
+      screenshots: [
+        "/screenshots/chainstaker/01.JPG",
+        "/screenshots/chainstaker/02.JPG",
+        "/screenshots/chainstaker/03.JPG"
+      ]
     },
     {
       title: "ModularNFT",
@@ -29,7 +46,12 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=400",
       tags: ["Solidity", "Next.js", "IPFS", "Pinata", "OpenZeppelin", "Wagmi", "Foundry"],
       demoUrl: "https://modular-nft.vercel.app/",
-      codeUrl: "#https://github.com/astierfe/Modular-NFT-Marketplace"
+      codeUrl: "#https://github.com/astierfe/Modular-NFT-Marketplace",
+      screenshots: [
+        "/screenshots/modular-nft/01.jpg",
+        "/screenshots/modular-nft/02.jpg",
+        "/screenshots/modular-nft/03.jpg"
+      ]
     },
     {
       title: "ModularMarketplace",
@@ -37,7 +59,12 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=400",
       tags: ["Solidity", "Next.js", "TypeScript", "Wagmi", "RainbowKit", "OpenZeppelin"],
       demoUrl: "https://modular-marketplace.vercel.app/",
-      codeUrl: "https://github.com/astierfe/Modular-Marketplace"
+      codeUrl: "https://github.com/astierfe/Modular-Marketplace",
+      screenshots: [
+        "/screenshots/modular-marketplace/01.JPG",
+        "/screenshots/modular-marketplace/02.JPG",
+        "/screenshots/modular-marketplace/03.JPG"
+      ]
     },
     {
       title: "UUPS VendingMachine",
@@ -45,9 +72,25 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg?auto=compress&cs=tinysrgb&w=400",
       tags: ["Solidity", "UUPS", "React", "Hardhat", "OpenZeppelin", "UML"],
       demoUrl: "https://astierfe.github.io/UUPS-VendingMachine",
-      codeUrl: "https://github.com/astierfe/UUPS-VendingMachine"
+      codeUrl: "https://github.com/astierfe/UUPS-VendingMachine",
+      screenshots: [
+        "/screenshots/UUPS-VendingMachine/01.JPG",
+        "/screenshots/UUPS-VendingMachine/02.JPG",
+        "/screenshots/UUPS-VendingMachine/03.JPG",
+        "/screenshots/UUPS-VendingMachine/04.JPG"
+      ]
     }
   ];
+
+  const openCarousel = (project: { title: string; screenshots: string[] }) => {
+    setSelectedProject(project);
+    setIsCarouselOpen(true);
+  };
+
+  const closeCarousel = () => {
+    setIsCarouselOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
 
   return (
     <section id="projects" className="py-20 relative">
@@ -98,7 +141,7 @@ const Projects = () => {
                 </div>
               </CardContent>
 
-              <CardFooter className="flex gap-3">
+              <CardFooter className="flex gap-2">
                 <Button variant="outline" size="sm" asChild className="flex-1">
                   <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} className="mr-2" />
@@ -111,11 +154,30 @@ const Projects = () => {
                     Code
                   </a>
                 </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1"
+                  onClick={() => openCarousel({ title: project.title, screenshots: project.screenshots })}
+                >
+                  <ImageIcon size={16} className="mr-2" />
+                  Screens
+                </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
       </div>
+
+      {/* Image Carousel Modal */}
+      {selectedProject && (
+        <ImageCarousel
+          images={selectedProject.screenshots}
+          projectTitle={selectedProject.title}
+          isOpen={isCarouselOpen}
+          onClose={closeCarousel}
+        />
+      )}
     </section>
   );
 };
