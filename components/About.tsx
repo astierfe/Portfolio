@@ -8,23 +8,23 @@ const About = () => {
   const highlights = [
     {
       icon: <Code size={24} />,
-      title: "15 ans d'expérience",
-      description: "Architecture logicielle et développement full-stack"
+      title: "15 ans d'expertise technique",
+      description: "Intégration système et architectures distribuées"
     },
     {
       icon: <Zap size={24} />,
-      title: "Expert TIBCO BW",
-      description: "Spécialiste intégration et microservices"
+      title: "Spécialiste Web3",
+      description: "Smart contracts Solidity, DeFi, NFT, DApps complètes"
     },
     {
       icon: <Users size={24} />,
-      title: "Leadership technique",
-      description: "Gestion d'équipes et mentoring développeurs"
+      title: "Systèmes distribués",
+      description: "De l'ESB/SOA à la blockchain décentralisée"
     },
     {
       icon: <Target size={24} />,
-      title: "Transition Web3",
-      description: "Focus blockchain Ethereum et DeFi"
+      title: "Stack fullstack",
+      description: "Solidity, React, Next.js, TypeScript, Python, Node.js"
     }
   ];
 
@@ -56,28 +56,43 @@ const About = () => {
 
           <div className="animate-fade-in-right">
             <h3 className="text-2xl font-bold mb-6 text-white">
-              Développeur passionné en transition vers Web3
+              Développeur Web3 fullstack spécialisé Ethereum et DeFi
             </h3>
             <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
               <p>
-                Avec 15 années d'expérience en architecture logicielle, j'ai évolué 
-                des systèmes d'intégration traditionnels vers l'écosystème blockchain révolutionnaire.
+                Développeur Web3 fullstack spécialisé Ethereum et DeFi, avec 15 ans d'expertise
+                en architecture d'intégration système pour des environnements critiques.
               </p>
-              <p>
-                Expert TIBCO BusinessWorks 5.x, j'ai dirigé des équipes techniques 
-                et conçu des architectures microservices complexes pour des entreprises 
-                internationales.
-              </p>
-              <p>
-                Aujourd'hui, je me spécialise dans le développement Web3 fullstack, 
-                avec un focus particulier sur Ethereum, les smart contracts Solidity, 
-                et les applications DeFi.
-              </p>
-              <p>
-                Ma solide expérience en architecture système me permet d'aborder 
-                la blockchain avec une vision technique mature et une approche 
-                méthodique de la sécurité.
-              </p>
+
+              <div className="space-y-2">
+                <p className="font-semibold text-blue-400">Expertise Web3</p>
+                <ul className="list-disc list-inside space-y-1 text-base">
+                  <li>Smart contracts Solidity avec patterns avancés (UUPS, DeFi protocols, NFT)</li>
+                  <li>Développement fullstack : React, Next.js, TypeScript, Node.js, Python</li>
+                  <li>Écosystème Ethereum : Foundry, Hardhat, The Graph, IPFS, OpenZeppelin</li>
+                  <li>DApps complètes : staking, lending, NFT marketplace, smart contracts upgradeables</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <p className="font-semibold text-blue-400">Expérience Technique</p>
+                <ul className="list-disc list-inside space-y-1 text-base">
+                  <li>15 ans en architecture SOA/ESB (TIBCO BusinessWorks, WebMethods, Oracle Service Bus)</li>
+                  <li>Conception de systèmes distribués pour BNP Paribas, EDF, Banque de France, GRDF, Accor Hotels</li>
+                  <li>Expertise en sécurité applicative, patterns d'intégration et architecture événementielle</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <p className="font-semibold text-blue-400">Certifications</p>
+                <p className="text-base">Alchemy EVM Chain • TOGAF 9.1 • TIBCO BusinessWorks</p>
+              </div>
+
+              <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg">
+                <p className="text-base font-semibold text-blue-300">
+                  📍 Disponible immédiatement • Remote-first • Paris 1j/semaine max • Freelance/CDI
+                </p>
+              </div>
             </div>
           </div>
         </div>

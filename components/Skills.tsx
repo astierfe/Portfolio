@@ -18,32 +18,37 @@ const Skills = () => {
     {
       title: "Blockchain & Web3",
       icon: <Cpu size={24} />,
-      skills: ["Solidity", "Web3.js", "Ethers.js", "Ethereum", "DeFi", "Smart Contracts", "IPFS", "OpenZeppelin"]
+      skills: ["Solidity", "Web3.js", "Ethers.js", "Viem", "Ethereum", "DeFi", "Smart Contracts", "IPFS", "OpenZeppelin", "Foundry", "Hardhat", "The Graph", "Wagmi", "RainbowKit", "Chainlink", "UniswapV3"]
     },
     {
       title: "Frontend",
       icon: <Code size={24} />,
-      skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Responsive Design"]
+      skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Chakra UI", "HTML5", "CSS3", "Recharts", "TanStack Query", "Responsive Design"]
     },
     {
       title: "Backend",
       icon: <Server size={24} />,
-      skills: ["Node.js", "Express", "Python", "Java", "REST APIs", "GraphQL", "Microservices", "TIBCO BW"]
+      skills: ["Node.js", "Python", "Flask", "Java", "Express", "REST APIs", "GraphQL", "MongoDB", "Redis", "Celery", "Event-driven architecture"]
     },
     {
-      title: "Databases",
-      icon: <Database size={24} />,
-      skills: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Oracle", "Database Design", "Query Optimization"]
-    },
-    {
-      title: "DevOps & Cloud",
-      icon: <Cloud size={24} />,
-      skills: ["Docker", "Kubernetes", "AWS", "CI/CD", "Jenkins", "Git", "Linux", "Monitoring"]
-    },
-    {
-      title: "Architecture",
+      title: "Integration & ESB",
       icon: <Layers size={24} />,
-      skills: ["System Design", "Microservices", "SOA", "Design Patterns", "Integration", "Performance", "Security"]
+      skills: ["TIBCO BusinessWorks", "WebMethods", "Oracle Service Bus", "SOA", "Microservices", "API Management", "MFT (Axway CFT)", "Message Queuing"]
+    },
+    {
+      title: "Databases & Tools",
+      icon: <Database size={24} />,
+      skills: ["MongoDB", "PostgreSQL", "Oracle DB", "MySQL", "Redis", "Git", "Docker", "Docker Compose", "Foundry", "Hardhat", "VS Code"]
+    },
+    {
+      title: "Architecture & Patterns",
+      icon: <Cloud size={24} />,
+      skills: ["System Design", "Distributed Systems", "Microservices", "SOA", "Event-driven", "Design Patterns", "Security", "Performance Optimization", "TOGAF", "UML", "Archimate"]
+    },
+    {
+      title: "Cloud & Infrastructure",
+      icon: <Cloud size={24} />,
+      skills: ["AWS", "PaaS", "SaaS", "IaaS", "Docker", "Kubernetes", "CI/CD", "Vercel", "Render", "Railway"]
     }
   ];
 
@@ -55,8 +60,9 @@ const Skills = () => {
             Compétences <span className="gradient-text">Techniques</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
-            Une expertise complète couvrant l'écosystème Web3 moderne 
-            et 15 années d'expérience en architecture système.
+            Stack technique complète couvrant l'écosystème Web3 Ethereum,
+            le développement fullstack moderne et 15 années d'expertise en
+            architecture d'intégration système.
           </p>
         </div>
 
@@ -99,16 +105,16 @@ const Skills = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="outline" className="text-lg px-4 py-2 border-purple-500/30 text-purple-300">
-              Ethereum Developer Course (2023)
+              Alchemy EVM Chain Certification (2024)
             </Badge>
             <Badge variant="outline" className="text-lg px-4 py-2 border-cyan-500/30 text-cyan-300">
-              DeFi Specialist Certification
+              TOGAF 9.1 Certified
             </Badge>
             <Badge variant="outline" className="text-lg px-4 py-2 border-blue-500/30 text-blue-300">
-              TIBCO Certified Professional
+              TIBCO BusinessWorks Certified Professional
             </Badge>
             <Badge variant="outline" className="text-lg px-4 py-2 border-green-500/30 text-green-300">
-              AWS Solutions Architect
+              Microsoft BizTalk Certified (2006-2010)
             </Badge>
           </div>
         </div>

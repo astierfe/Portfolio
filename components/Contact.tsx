@@ -40,32 +40,32 @@ const Contact = () => {
     {
       icon: <Mail size={24} />,
       title: "Email",
-      value: "alexandre.dubois@example.com",
-      link: "mailto:alexandre.dubois@example.com"
+      value: "astierfe@gmail.com",
+      link: "mailto:astierfe@gmail.com"
     },
     {
       icon: <Phone size={24} />,
       title: "Téléphone",
-      value: "+33 6 12 34 56 78",
-      link: "tel:+33612345678"
+      value: "+33 6 45 78 85 56",
+      link: "tel:+33645788556"
     },
     {
       icon: <MapPin size={24} />,
       title: "Localisation",
-      value: "Paris, France",
+      value: "Troyes, France (Remote-first)",
       link: null
     },
     {
       icon: <Github size={24} />,
       title: "GitHub",
-      value: "github.com/alexandre",
-      link: "https://github.com/alexandre"
+      value: "github.com/astierfe",
+      link: "https://github.com/astierfe"
     },
     {
       icon: <Linkedin size={24} />,
       title: "LinkedIn",
-      value: "linkedin.com/in/alexandre",
-      link: "https://linkedin.com/in/alexandre"
+      value: "linkedin.com/in/Felicien-Astier",
+      link: "https://www.linkedin.com/in/f%C3%A9licien-astier-87101542/"
     }
   ];
 
@@ -196,12 +196,16 @@ const Contact = () => {
                     Disponibilité
                   </h4>
                   <p className="text-gray-400 mb-4">
-                    Actuellement ouvert aux opportunités en tant que développeur Web3 fullstack.
+                    Disponible immédiatement pour missions freelance ou CDI.
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2 text-green-400 text-sm">
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <span>Disponible pour missions</span>
+                      <span>Remote-first</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-blue-400 text-sm">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <span>1 jour/semaine à Paris maximum</span>
                     </div>
                   </div>
                 </div>

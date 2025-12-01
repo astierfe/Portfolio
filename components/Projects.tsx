@@ -8,36 +8,44 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: "DEX Protocol",
-      description: "Plateforme d'échange décentralisée avec pools de liquidité automatisés et farming de tokens. Architecture complète avec smart contracts Solidity et interface React.",
+      title: "LendForge",
+      description: "Protocole de prêt décentralisé sur Ethereum avec emprunt sur-collatéralisé, liquidations automatisées et oracle Chainlink. Architecture complète avec subgraph TheGraph, bot de liquidation Python et interface Next.js. Support multi-actifs (ETH, DAI, USDC).",
       image: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400",
-      tags: ["Solidity", "React", "Web3.js", "Ethers.js", "DeFi"],
-      demoUrl: "https://demo.example.com",
-      codeUrl: "https://github.com/example/dex-protocol"
+      tags: ["Solidity", "The Graph", "Python", "Next.js", "Chainlink", "DeFi", "Foundry"],
+      demoUrl: "https://lend-forge.vercel.app/",
+      codeUrl: "https://github.com/astierfe/LendForge"
     },
     {
-      title: "NFT Marketplace",
-      description: "Marketplace NFT avec minting, enchères et royalties automatiques. Smart contracts optimisés gas et interface utilisateur moderne.",
-      image: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=400",
-      tags: ["Solidity", "Next.js", "IPFS", "OpenZeppelin", "TypeScript"],
-      demoUrl: "https://demo.example.com",
-      codeUrl: "https://github.com/example/nft-marketplace"
-    },
-    {
-      title: "DAO Governance",
-      description: "Système de gouvernance décentralisée avec vote pondéré et propositions automatisées. Integration avec Snapshot et multisig.",
-      image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=400",
-      tags: ["Solidity", "Governance", "Multisig", "React", "Web3"],
-      demoUrl: "https://demo.example.com",
-      codeUrl: "https://github.com/example/dao-governance"
-    },
-    {
-      title: "Yield Farming DApp",
-      description: "Application de farming avec stratégies automatisées et calcul de rendements en temps réel. Interface intuitive pour la gestion des positions.",
+      title: "ChainStaker",
+      description: "Plateforme de staking DeFi avec système multi-tier (7/30/90 jours), rewards dynamiques et analytics avancés. Backend événementiel Python/Flask avec MongoDB, event listener temps réel et 8 tâches Celery planifiées. Interface Next.js avec auto-refresh et charts Recharts.",
       image: "https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=400",
-      tags: ["DeFi", "Smart Contracts", "React", "Web3", "Compound"],
-      demoUrl: "https://demo.example.com",
-      codeUrl: "https://github.com/example/yield-farming"
+      tags: ["Solidity", "Python", "Flask", "MongoDB", "Redis", "Celery", "Next.js", "Foundry"],
+      demoUrl: "https://chainstalker.vercel.app/",
+      codeUrl: "https://github.com/astierfe/ChainStalker"
+    },
+    {
+      title: "ModularNFT",
+      description: "Collection NFT complète (1000 NFTs max) avec smart contract ERC-721 incluant royalties EIP-2981, batch minting et interface d'administration. Métadonnées et images IPFS via Pinata. Interface Next.js avec connexion multi-wallets RainbowKit et statistiques temps réel.",
+      image: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=400",
+      tags: ["Solidity", "Next.js", "IPFS", "Pinata", "OpenZeppelin", "Wagmi", "Foundry"],
+      demoUrl: "https://modular-nft.vercel.app/",
+      codeUrl: "#https://github.com/astierfe/Modular-NFT-Marketplace"
+    },
+    {
+      title: "ModularMarketplace",
+      description: "Marketplace NFT peer-to-peer décentralisée pour trading de NFTs avec distribution automatique des royalties (EIP-2981). Listing/delisting, système d'achat direct, gestion des revenus par adresse. Interface Next.js avec RainbowKit et EmailJS pour le support.",
+      image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=400",
+      tags: ["Solidity", "Next.js", "TypeScript", "Wagmi", "RainbowKit", "OpenZeppelin"],
+      demoUrl: "https://modular-marketplace.vercel.app/",
+      codeUrl: "https://github.com/astierfe/Modular-Marketplace"
+    },
+    {
+      title: "UUPS VendingMachine",
+      description: "DApp de distributeur automatique avec smart contracts upgradeables (pattern UUPS). Dashboard admin complet, analytics avancés, système de permissions. Documentation UML exhaustive (12 diagrammes). Démonstration des upgrades de contrats sans perte d'état.",
+      image: "https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg?auto=compress&cs=tinysrgb&w=400",
+      tags: ["Solidity", "UUPS", "React", "Hardhat", "OpenZeppelin", "UML"],
+      demoUrl: "https://astierfe.github.io/UUPS-VendingMachine",
+      codeUrl: "https://github.com/astierfe/UUPS-VendingMachine"
     }
   ];
 
@@ -49,8 +57,9 @@ const Projects = () => {
             Projets <span className="gradient-text">Web3</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
-            Découvrez mes dernières créations blockchain, des DeFi aux NFT, 
-            développées avec les technologies les plus avancées de l'écosystème Ethereum.
+            Découvrez mes projets blockchain Ethereum : protocoles DeFi, NFT marketplace,
+            staking platform et smart contracts upgradeables. Stack complète Solidity,
+            Next.js, Python, The Graph.
           </p>
         </div>
 

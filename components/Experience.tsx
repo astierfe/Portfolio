@@ -6,42 +6,55 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Experience = () => {
   const experiences = [
     {
-      period: "2020 - 2024",
-      title: "Architecte Senior",
-      company: "TechCorp Solutions",
+      "period": "2021 - maintenant",
+      "title": "Développeur Web3 Fullstack / Formation Blockchain",
+      "company": "Projets personnels | Transition carrière",
+      "location": "Remote",
+      "achievements": [
+        "Développement 5 projets blockchain Ethereum Sepolia : LendForge (protocole DeFi), ChainStaker (staking multi-tier), ModularNFT (collection ERC-721), ModularMarketplace (trading NFT), UUPSVendingMachine (smart contracts upgradeables)",
+        "Maîtrise Solidity, Foundry, Hardhat, Web3.js, Ethers.js, The Graph, Chainlink oracles et patterns avancés (UUPS, DeFi, ERC-721)",
+        "Stack fullstack : React/Next.js/TypeScript frontend, Python/Flask/MongoDB/Redis/Celery backend, IPFS via Pinata",
+        "Certifications : Alchemy EVM Chain (2024), mise en pratique architecture décentralisée et design patterns blockchain",
+        "Transition naturelle de 15 ans architecture SI/ESB vers systèmes décentralisés peer-to-peer"
+      ]
+    },
+    {
+      period: "2017 - 2021",
+      title: "Architecte SI / Urbaniste d'Échanges",
+      company: "GRDF",
       location: "Paris, France",
       achievements: [
-        "Architecture et développement de solutions microservices complexes",
-        "Expert technique TIBCO BusinessWorks 5.x et 6.x",
-        "Gestion et mentoring d'équipes techniques (8-12 développeurs)",
-        "Conception d'APIs REST haute performance et intégrations système",
-        "Migration de systèmes legacy vers architectures cloud-native"
+        "Architecture et modélisation des échanges inter-applicatifs (programme EPOD)",
+        "Conception de pivots d'échanges et génération XSD/WSDL",
+        "Mise en place d'une supervision des échanges (architecture ELK + Dynatrace)",
+        "Étude d'opportunité architecture Microservices",
+        "Management équipe échanges (3 personnes)"
       ]
     },
     {
-      period: "2015 - 2020",
-      title: "Développeur Senior",
-      company: "Integration Systems Ltd",
-      location: "Lyon, France",
+      period: "2014 - 2017",
+      title: "Architecte SI / Urbaniste d'Échanges",
+      company: "Banque de France",
+      location: "Paris, France",
       achievements: [
-        "Développement de solutions d'intégration pour clients enterprise",
-        "Formation et accompagnement d'équipes sur TIBCO Suite",
-        "Analyse technique et conception de systèmes distribués",
-        "Optimisation performance et monitoring applications critiques",
-        "Gestion de projets techniques avec méthodologie Agile"
+        "Définition de la politique des échanges inter-applicatifs (ESB, API Management, MFT)",
+        "Modélisation des patterns d'échanges (Building Blocks) dans ARIS (Archimate)",
+        "Chef de projet MOA pour mise en place solution MFT (Axway CFT)",
+        "Support aux architectes et projets sur problématiques d'intégration",
+        "Cartographie du SI et modélisation des processus métier (BPMN)"
       ]
     },
     {
-      period: "2009 - 2015",
-      title: "Développeur",
-      company: "Software Dynamics",
-      location: "Marseille, France",
+      period: "2005 - 2014",
+      title: "Architecte Applicatif / Consultant ESB",
+      company: "Diverses missions (EDF, BNP Paribas Assurance, Dalkia)",
+      location: "France",
       achievements: [
-        "Développement d'applications métier Java/J2EE",
-        "Intégration de systèmes legacy avec nouvelles technologies",
-        "Maintenance évolutive et corrective applications existantes",
-        "Participation à la conception d'architectures SOA",
-        "Développement de connecteurs et adaptateurs personnalisés"
+        "Conception et développement de plateformes d'échanges centralisées (ESB)",
+        "Architecture SOA avec TIBCO BusinessWorks, WebMethods, Oracle Service Bus",
+        "Intégration de systèmes complexes pour secteurs finance et énergie",
+        "Développement Java/J2EE, PL/SQL pour applications critiques",
+        "Expert technique ESB sur projets d'urbanisation SI"
       ]
     }
   ];
@@ -54,8 +67,8 @@ const Experience = () => {
             Expériences <span className="gradient-text">Professionnelles</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
-            15 années d'expertise technique, de l'intégration système 
-            à l'architecture cloud, vers l'innovation blockchain.
+            15 années d'expertise technique en architecture d'intégration système
+            et développement ESB/SOA pour des acteurs majeurs de la finance et de l'énergie.
           </p>
         </div>
 

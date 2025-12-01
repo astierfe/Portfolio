@@ -8,17 +8,17 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com/alexandre',
+      url: '#contact',
       icon: <Github size={20} />
     },
     {
-      name: 'LinkedIn', 
-      url: 'https://linkedin.com/in/alexandre',
+      name: 'LinkedIn',
+      url: '#contact',
       icon: <Linkedin size={20} />
     },
     {
       name: 'Email',
-      url: 'mailto:alexandre.dubois@example.com',
+      url: 'mailto:astierfe@gmail.com',
       icon: <Mail size={20} />
     }
   ];
@@ -27,6 +27,8 @@ const Footer = () => {
     { name: 'Accueil', href: '#hero' },
     { name: 'Projets', href: '#projects' },
     { name: 'À propos', href: '#about' },
+    { name: 'Expériences', href: '#experience' },
+    { name: 'Compétences', href: '#skills' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -44,11 +46,11 @@ const Footer = () => {
           {/* Brand and description */}
           <div className="md:col-span-1">
             <h3 className="text-2xl font-bold gradient-text mb-4">
-              Alexandre.dev
+              Félicien Astier
             </h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Développeur Web3 fullstack passionné par l'innovation blockchain 
-              et l'architecture logicielle moderne.
+              Développeur Web3 fullstack spécialisé Ethereum et DeFi.
+              15 ans d'expertise en architecture d'intégration système.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((link) => (
@@ -91,10 +93,10 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-3 text-gray-400">
-              <p>alexandre.dubois@example.com</p>
-              <p>Paris, France</p>
+              <p>astierfe@gmail.com</p>
+              <p>Troyes, France</p>
               <p className="text-sm">
-                Ouvert aux opportunités en développement Web3
+                Disponible immédiatement • Remote-first • Freelance/CDI
               </p>
             </div>
           </div>
@@ -103,7 +105,7 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-400 text-sm">
-            © {currentYear} Alexandre Dubois. Tous droits réservés.
+            © {currentYear} Félicien Astier. Tous droits réservés.
           </div>
           <div className="flex items-center gap-2 text-gray-400 text-sm">
             <span>Développé avec</span>

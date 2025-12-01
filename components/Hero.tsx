@@ -26,13 +26,13 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Astier <span className="gradient-text">Felicien</span>
+              Félicien <span className="gradient-text">Astier</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-300 mb-4">
               Développeur Web3 Fullstack
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-              Spécialisé Blockchain Ethereum • 15 ans d'expérience en architecture logicielle
+              Spécialisé Blockchain Ethereum & DeFi • 15 ans d'expertise en intégration système
             </p>
           </div>
 
@@ -45,19 +45,17 @@ const Hero = () => {
               Découvrir mes projets
             </Button>
             <div className="flex gap-4">
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <a
+                href="https://github.com/astierfe"
                 className="p-3 rounded-full border border-blue-500/30 hover:border-blue-500/60 transition-colors duration-200 hover:bg-blue-500/10"
+                title="GitHub"
               >
                 <Github size={24} />
               </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <a
+                href="https://www.linkedin.com/in/f%C3%A9licien-astier-87101542/"
                 className="p-3 rounded-full border border-blue-500/30 hover:border-blue-500/60 transition-colors duration-200 hover:bg-blue-500/10"
+                title="LinkedIn"
               >
                 <Linkedin size={24} />
               </a>
