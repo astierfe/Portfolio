@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -73,10 +73,10 @@ const Header = () => {
                     '_blank'
                   );
                 }}
-                className="text-gray-300 hover:text-blue-400 hover:bg-slate-800"
+                className="text-gray-300 hover:text-blue-400 hover:bg-slate-800 flex items-center gap-2"
                 title="Translate to English"
               >
-                <span className="mr-1">🇬🇧</span>
+                <img src="/icons8-grande-bretagne-48.png" alt="UK flag" className="w-5 h-3" />
                 EN
               </Button>
             </div>
