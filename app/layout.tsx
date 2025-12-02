@@ -18,6 +18,15 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://astier-felicien.dev'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/icon.png', sizes: '64x64', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '64x64', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Felicien Astier - Développeur Web3 Fullstack',
     description: 'Développeur Web3 fullstack spécialisé blockchain Ethereum avec 15 ans d\'expérience en architecture transverse.',

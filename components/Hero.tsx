@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -59,11 +59,19 @@ const Hero = () => {
               >
                 <Linkedin size={24} />
               </a>
-              <a 
+              <a
                 href="mailto:astierfe@gmail.com"
                 className="p-3 rounded-full border border-blue-500/30 hover:border-blue-500/60 transition-colors duration-200 hover:bg-blue-500/10"
+                title="Email"
               >
                 <Mail size={24} />
+              </a>
+              <a
+                href="#cv"
+                className="p-3 rounded-full border border-green-500/30 hover:border-green-500/60 transition-colors duration-200 hover:bg-green-500/10"
+                title="CV / Resume"
+              >
+                <FileText size={24} className="text-green-400" />
               </a>
             </div>
           </div>

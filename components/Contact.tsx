@@ -106,7 +106,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="animate-fade-in-left">
+          <div className="animate-fade-in-left space-y-8">
             <Card className="project-card">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
@@ -185,6 +185,35 @@ const Contact = () => {
                 </form>
               </CardContent>
             </Card>
+
+            {/* CV Card */}
+            <Card id="cv" className="project-card scroll-mt-20">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
+                  <Download size={24} className="text-green-400" />
+                  Curriculum Vitae
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-gray-400 mb-4">
+                  Téléchargez mon CV en français ou en anglais
+                </p>
+                <div className="flex flex-col gap-3">
+                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                    <a href="/CV_Astier_Dev-Web3_FR.pdf" download>
+                      <Download size={20} className="mr-2" />
+                      Télécharger mon CV (FR)
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full border-blue-500 text-blue-400 hover:bg-blue-500/10">
+                    <a href="/CV_Astier_Dev-Web3_EN.pdf" download>
+                      <Download size={20} className="mr-2" />
+                      Download my Resume (EN)
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Contact Information */}
@@ -230,7 +259,7 @@ const Contact = () => {
                   <p className="text-gray-400 mb-4">
                     Disponible immédiatement pour missions freelance ou CDI.
                   </p>
-                  <div className="flex flex-col gap-2 mb-6">
+                  <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2 text-green-400 text-sm">
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                       <span>Remote-first</span>
@@ -240,13 +269,6 @@ const Contact = () => {
                       <span>1 jour/semaine à Paris maximum</span>
                     </div>
                   </div>
-
-                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                    <a href="/CV_FelicienAstier_Dev-Web3.pdf" download>
-                      <Download size={20} className="mr-2" />
-                      Télécharger mon CV
-                    </a>
-                  </Button>
                 </div>
               </CardContent>
             </Card>

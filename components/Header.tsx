@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -24,6 +24,7 @@ const Header = () => {
     { name: 'Expériences', href: '#experience' },
     { name: 'Compétences', href: '#skills' },
     { name: 'Contact', href: '#contact' },
+    { name: 'CV', href: '#cv' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -75,7 +76,7 @@ const Header = () => {
                 className="text-gray-300 hover:text-blue-400 hover:bg-slate-800"
                 title="Translate to English"
               >
-                <Globe size={18} className="mr-1" />
+                <span className="mr-1">🇬🇧</span>
                 EN
               </Button>
             </div>
@@ -119,7 +120,7 @@ const Header = () => {
                 className="text-gray-300 hover:text-blue-400 hover:bg-slate-800 w-full justify-start"
                 title="Translate to English"
               >
-                <Globe size={18} className="mr-2" />
+                <span className="mr-2">🇬🇧</span>
                 Traduire en anglais
               </Button>
             </div>
